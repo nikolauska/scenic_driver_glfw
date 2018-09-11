@@ -4,10 +4,10 @@ jobs:
     docker:
       - image: elixir:1.7.3
     steps:
-      - checkout
       - run: apt update
-      - run: apt install -y libglfw3-dev
+      - run: apt install -y libglew-dev libglfw3-dev
       - run: mix local.hex --force
       - run: mix local.rebar --force
+      - checkout
       - run: mix deps.get
       - run: mix compile --warnings-as-errors
