@@ -7,7 +7,7 @@ addons:
     packages:
       - make
       - gcc
-      - glfw3-dev
+      - libglfw3-dev
 
 install:
   - mix local.rebar --force
