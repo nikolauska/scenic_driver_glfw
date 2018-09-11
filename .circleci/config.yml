@@ -5,6 +5,7 @@ jobs:
       - image: elixir:1.7.3
     steps:
       - checkout
+      - run: apt update
       - run: apt install make gcc libglfw3-dev
       - run: mix deps.get
       - run: mix compile --warnings-as-errors
